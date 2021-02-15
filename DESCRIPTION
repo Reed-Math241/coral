@@ -1,10 +1,10 @@
-Package: pkgDemo
+Package: pkgGrph
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Coral Samples and Molecular Data from Around the World
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
+Author: Maggie Slein, Tayla Isensee, and Henry Scheffer
+Maintainer: <scheffeh@reed.edu>
+Description: This is a dataset from coraltraits.org which acts as a global repository for shallow, reef building coral species. This datast will help with estimating the effects of climate change and warming oceans on coral populations and biodiversity. We include a range of variables important for the identification of corals and their biological characteristics.
     Use four spaces when indenting paragraphs within the Description.
 License: What license is it under?
 Encoding: UTF-8
