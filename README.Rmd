@@ -30,13 +30,24 @@ The development version of 0.1.0 is available from [GitHub](https://github.com/)
 # install.packages("devtools")
 devtools::install_github("Reed-Math241/pkgGrph")
 ```
+## Data Format
+This data is organized such that each species (stored in 'specie_name') of coral has multiple entries for each possible trait. To access a specific trait, a subset of the data set must be taken which only includes that trait using the variable 'trait_name'. Further information on that trait is found in 'trait_class' variable and the value for that trait is stored in the variable called 'value'. Due to this mixed organization of coral traits, when using the data set you must specify whether 'value' is numerical or categorical depending on which traits you're evaluating.
 ## Example
-
+In this example we will show you how to evaluate the global distribution of ranges of corals. These can very dramatically depending on the ecosystem and reproductive strategies of the coral.
 ###Load Package
 ```{r example}
 library(pkgGrph)
+library(tidyverse)
 ```
-
-
-
-
+###Select range size as the trait being worked on in the current dataset
+```{r}
+coralRange <- coral %>%
+  filter(trait_name == "Range size")
+```
+###Create a histogram based on the range size of corals.
+```{r}
+ggplot(data = coralRange, mapping = aes(x = as.numeric(value))) + 
+  geom_histogram(binwidth = 500000, color = "#D5A5EA") + 
+  labs(x = "Range of coral (km)", y = "Number of Corals", title = "Geographic Range of All Corals")
+```
+Here we can see that the majority of corals have a relatively small range with a smaller number that have an exceedingly large range. These could be deep sea corals that reproduce by freely releasing offspring or they could be corals that are capable of growing in a large variety of different habitats. But we'll leave it up to you to figure that out. 
