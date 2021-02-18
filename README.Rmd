@@ -36,7 +36,7 @@ This data is organized such that each species (stored in 'specie_name') of coral
 In this example we will show you how to evaluate the global distribution of ranges of corals. These can very dramatically depending on the ecosystem and reproductive strategies of the coral.
 ###Load Package
 ```{r example}
-library(pkgGrph)
+library(coral)
 library(tidyverse)
 ```
 ###Select range size as the trait being worked on in the current dataset

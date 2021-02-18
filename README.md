@@ -17,7 +17,7 @@ projects.
 
 ## Installation
 
-The development version of 1.0.0 is available from
+The development version of 0.1.0 is available from
 [GitHub](https://github.com/) with:
 
 ``` r
@@ -25,8 +25,53 @@ The development version of 1.0.0 is available from
 devtools::install_github("Reed-Math241/pkgGrph")
 ```
 
-## Example
+## Data Format
+
+This data is organized such that each species (stored in ‘specie\_name’)
+of coral has multiple entries for each possible trait. To access a
+specific trait, a subset of the data set must be taken which only
+includes that trait using the variable ‘trait\_name’. Further
+information on that trait is found in ‘trait\_class’ variable and the
+value for that trait is stored in the variable called ‘value’. Due to
+this mixed organization of coral traits, when using the data set you
+must specify whether ‘value’ is numerical or categorical depending on
+which traits you’re evaluating. \#\# Example In this example we will
+show you how to evaluate the global distribution of ranges of corals.
+These can very dramatically depending on the ecosystem and reproductive
+strategies of the coral. \#\#\#Load Package
 
 ``` r
-library(pkgGrph)
+library(coral)
+library(tidyverse)
+#> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
+#> ✓ ggplot2 3.3.3     ✓ purrr   0.3.4
+#> ✓ tibble  3.0.4     ✓ dplyr   1.0.2
+#> ✓ tidyr   1.1.2     ✓ stringr 1.4.0
+#> ✓ readr   1.4.0     ✓ forcats 0.5.0
+#> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+#> x dplyr::filter() masks stats::filter()
+#> x dplyr::lag()    masks stats::lag()
 ```
+
+\#\#\#Select range size as the trait being worked on in the current
+dataset
+
+``` r
+coralRange <- coral %>%
+  filter(trait_name == "Range size")
+```
+
+\#\#\#Create a histogram based on the range size of corals.
+
+``` r
+ggplot(data = coralRange, mapping = aes(x = as.numeric(value))) + 
+  geom_histogram(binwidth = 500000, color = "#D5A5EA") + 
+  labs(x = "Range of coral (km)", y = "Number of Corals", title = "Geographic Range of All Corals")
+```
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" /> Here
+we can see that the majority of corals have a relatively small range
+with a smaller number that have an exceedingly large range. These could
+be deep sea corals that reproduce by freely releasing offspring or they
+could be corals that are capable of growing in a large variety of
+different habitats. But we’ll leave it up to you to figure that out.
