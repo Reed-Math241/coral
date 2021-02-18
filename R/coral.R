@@ -25,5 +25,5 @@
 #' Data collected by Joshua Madin for the Coral Traits database 
 #' See also 
 #' <https://figshare.com/articles/dataset/Coral_Trait_Database_1_1_1/2067414>
-NA
+"coral"
 
