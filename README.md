@@ -27,18 +27,13 @@ devtools::install_github("Reed-Math241/pkgGrph")
 
 ## Data Format
 
-This data is organized such that each species (stored in ‘specie\_name’)
-of coral has multiple entries for each possible trait. To access a
-specific trait, a subset of the data set must be taken which only
-includes that trait using the variable ‘trait\_name’. Further
-information on that trait is found in ‘trait\_class’ variable and the
-value for that trait is stored in the variable called ‘value’. Due to
-this mixed organization of coral traits, when using the data set you
-must specify whether ‘value’ is numerical or categorical depending on
-which traits you’re evaluating. \#\# Example In this example we will
-show you how to evaluate the global distribution of ranges of corals.
-These can very dramatically depending on the ecosystem and reproductive
-strategies of the coral. \#\#\#Load Package
+This data is organized such that each species of coral has values for
+the ocean it is predominantly found in (ocean\_basin), the preferred
+clarity of the coral’s waters (water\_clarity\_preference), and the
+estimated geographic range of the coral. \#\# Example In this example we
+will show you how to evaluate the global distribution of ranges of
+corals. These can very dramatically depending on the ecosystem and
+reproductive strategies of the coral. \#\#\#Load Package
 
 ``` r
 library(coral)
@@ -53,23 +48,16 @@ library(tidyverse)
 #> x dplyr::lag()    masks stats::lag()
 ```
 
-\#\#\#Select range size as the trait being worked on in the current
-dataset
-
-``` r
-coralRange <- coral %>%
-  filter(trait_name == "Range size")
-```
-
 \#\#\#Create a histogram based on the range size of corals.
 
 ``` r
-ggplot(data = coralRange, mapping = aes(x = as.numeric(value))) + 
+ggplot(data = coral, mapping = aes(x = range_size)) + 
   geom_histogram(binwidth = 500000, color = "#D5A5EA") + 
   labs(x = "Range of coral (km)", y = "Number of Corals", title = "Geographic Range of All Corals")
+#> Warning: Removed 31108 rows containing non-finite values (stat_bin).
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" /> Here
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" /> Here
 we can see that the majority of corals have a relatively small range
 with a smaller number that have an exceedingly large range. These could
 be deep sea corals that reproduce by freely releasing offspring or they
