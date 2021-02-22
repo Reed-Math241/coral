@@ -6,7 +6,7 @@ Author: Maggie Slein, Tayla Isensee, and Henry Scheffer
 Maintainer: <scheffeh@reed.edu>
 Description: This is a dataset from coraltraits.org which acts as a global repository for shallow, reef building coral species. This datast will help with estimating the effects of climate change and warming oceans on coral populations and biodiversity. We include a range of variables important for the identification of corals and their biological characteristics.
     Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+License: CC0
 Encoding: UTF-8
 LazyData: true
 Depends: 
