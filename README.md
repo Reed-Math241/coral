@@ -21,8 +21,23 @@ The development version of 0.1.0 is available from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("Reed-Math241/pkgGrph")
+install.packages("devtools")
+#> Installing package into '/tmp/RtmpgxteBG/temp_libpath52b53ed8a444'
+#> (as 'lib' is unspecified)
+devtools::install_github("Reed-Math241/pkgGrph", 
+                         auth_token = "1e21f285822afb4c8472ee27334a3ead08e8f3ab")
+#> Downloading GitHub repo Reed-Math241/pkgGrph@HEAD
+#>      checking for file ‘/tmp/RtmpBu3vK3/remotes66e7488af14a/Reed-Math241-pkgGrph-4b0f3602e0afb0c971ed281ce9542752e928add5/DESCRIPTION’ ...  ✓  checking for file ‘/tmp/RtmpBu3vK3/remotes66e7488af14a/Reed-Math241-pkgGrph-4b0f3602e0afb0c971ed281ce9542752e928add5/DESCRIPTION’ (455ms)
+#>   ─  preparing ‘coral’:
+#>      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
+#>   ─  checking for LF line-endings in source and make files and shell scripts
+#>   ─  checking for empty or unneeded directories
+#>   ─  building ‘coral_0.1.0.tar.gz’
+#>      Warning: invalid uid value replaced by that for user 'nobody'
+#>      
+#> 
+#> Installing package into '/tmp/RtmpgxteBG/temp_libpath52b53ed8a444'
+#> (as 'lib' is unspecified)
 ```
 
 ## Data Format
@@ -33,7 +48,7 @@ clarity of the coral’s waters (water\_clarity\_preference), and the
 estimated geographic range of the coral. \#\# Example In this example we
 will show you how to evaluate the global distribution of ranges of
 corals. These can very dramatically depending on the ecosystem and
-reproductive strategies of the coral. \#\#\#Load Package
+reproductive strategies of the coral. \#\#\# Load Package
 
 ``` r
 library(coral)
@@ -48,17 +63,18 @@ library(tidyverse)
 #> x dplyr::lag()    masks stats::lag()
 ```
 
-\#\#\#Create a histogram based on the range size of corals.
+### Create a histogram based on the range size of corals.
 
 ``` r
 rangesize_plot <- ggplot(data = coral, mapping = aes(x = range_size)) + 
   geom_histogram(binwidth = 500000, color = "#D5A5EA") + 
-  labs(x = "Range of coral (km)", y = "Number of Corals", title = "Geographic Range of All Corals")
+  labs(x = "Range of coral (km)", y = "Number of Corals", 
+       title = "Geographic Range of All Corals")
 rangesize_plot
 #> Warning: Removed 31108 rows containing non-finite values (stat_bin).
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" /> Here
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" /> Here
 we can see that the majority of corals have a relatively small range
 with a smaller number that have an exceedingly large range. These could
 be deep sea corals that reproduce by freely releasing offspring or they

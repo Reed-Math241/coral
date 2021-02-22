@@ -26,25 +26,28 @@ The goal of the coral package is to provide data on the species and characterist
 
 The development version of 0.1.0 is available from [GitHub](https://github.com/) with:
 
-``` r
-# install.packages("devtools")
-devtools::install_github("Reed-Math241/pkgGrph")
+``` {r}
+#only use auth_token if pkgGrph is a private repo
+install.packages("devtools")
+devtools::install_github("Reed-Math241/pkgGrph", 
+                         auth_token = "1e21f285822afb4c8472ee27334a3ead08e8f3ab")
 ```
 ## Data Format
 This data is organized such that each species of coral has values for the ocean it is predominantly found in (ocean_basin), the preferred clarity of the coral's waters (water_clarity_preference), and the estimated geographic range of the coral. 
 ## Example
 In this example we will show you how to evaluate the global distribution of ranges of corals. These can very dramatically depending on the ecosystem and reproductive strategies of the coral.
-###Load Package
+### Load Package
 ```{r example}
 library(coral)
 library(tidyverse)
 ```
 
-###Create a histogram based on the range size of corals.
+### Create a histogram based on the range size of corals.
 ```{r}
 rangesize_plot <- ggplot(data = coral, mapping = aes(x = range_size)) + 
   geom_histogram(binwidth = 500000, color = "#D5A5EA") + 
-  labs(x = "Range of coral (km)", y = "Number of Corals", title = "Geographic Range of All Corals")
+  labs(x = "Range of coral (km)", y = "Number of Corals", 
+       title = "Geographic Range of All Corals")
 rangesize_plot
 ```
 Here we can see that the majority of corals have a relatively small range with a smaller number that have an exceedingly large range. These could be deep sea corals that reproduce by freely releasing offspring or they could be corals that are capable of growing in a large variety of different habitats. But we'll leave it up to you to figure that out. 
