@@ -8,17 +8,10 @@
 #' @usage data(coral)
 #' @format  A data frame with 32585 observations on the following 11 variables.
 #' \itemize{
-#' \item{\code{observation_id}}{  unique integer grouping one set of measurements into a single observation }
-#' \item{\code{access}}{ indicates whether or not the observation is publically available (1 is public, 0 is private) }
-#' \item{\code{specie_name}}{ Coral genus and species for given oberservation }
-#' \item{\code{location_name}}{ Location name for a given observation }
-#' \item{\code{trait_name}}{ Unique ID for a specific trait measured in the observation}
-#' \item{\code{trait_class}}{ Grouping unique traits into larger classes for faceted analysis, groups including physiological traits, ecological traits, geographical traits. etc. }
-#' \item{\code{resource_id}}{ Unique ID corresponding to the paper where data for given observation is found, if left blank, data is unpublished  }
-#' \item{\code{standard_id}}{ Unique ID for the units in a given observation }
-#' \item{\code{standard_unit}}{ The actual units in a given observation  }
-#' \item{\code{value}}{The raw value of a given observation }
-#' \item{\code{value_type}}{The type of raw value (i.e. raw, mean, expert opinion, etc.) }
+#' \item{\code{species}}{ scientific genus and species name of coral }
+#' \item{\code{ocean_basin}}{ defines the major ocean where the sample was taken (note that Indian ocean samples are grouped under "pacific") }
+#' \item{\code{water_clarity_preference}}{ water clarity preferred by coral; either clear, turbid, or both }
+#' \item{\code{range_size}}{ observed geographic range size of the coral in kilometers squared }
 #'
 #' }
 #' @source 
