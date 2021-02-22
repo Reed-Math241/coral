@@ -6,7 +6,7 @@
 #' @docType data
 #' @name coral
 #' @usage data(coral)
-#' @format  A data frame with 32585 observations on the following 11 variables.
+#' @format  A data frame with 1503 observations on the following 4 variables.
 #' \itemize{
 #' \item{\code{species}}{ scientific genus and species name of coral }
 #' \item{\code{ocean_basin}}{ defines the major ocean where the sample was taken (note that Indian ocean samples are grouped under "pacific") }
