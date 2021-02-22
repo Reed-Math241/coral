@@ -21,23 +21,10 @@ The development version of 0.1.0 is available from
 [GitHub](https://github.com/) with:
 
 ``` r
+#only use auth_token if pkgGrph is a private repo
 install.packages("devtools")
-#> Installing package into '/tmp/RtmpgxteBG/temp_libpath52b53ed8a444'
-#> (as 'lib' is unspecified)
 devtools::install_github("Reed-Math241/pkgGrph", 
                          auth_token = "1e21f285822afb4c8472ee27334a3ead08e8f3ab")
-#> Downloading GitHub repo Reed-Math241/pkgGrph@HEAD
-#>      checking for file ‘/tmp/RtmpBu3vK3/remotes66e7488af14a/Reed-Math241-pkgGrph-4b0f3602e0afb0c971ed281ce9542752e928add5/DESCRIPTION’ ...  ✓  checking for file ‘/tmp/RtmpBu3vK3/remotes66e7488af14a/Reed-Math241-pkgGrph-4b0f3602e0afb0c971ed281ce9542752e928add5/DESCRIPTION’ (455ms)
-#>   ─  preparing ‘coral’:
-#>      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
-#>   ─  checking for LF line-endings in source and make files and shell scripts
-#>   ─  checking for empty or unneeded directories
-#>   ─  building ‘coral_0.1.0.tar.gz’
-#>      Warning: invalid uid value replaced by that for user 'nobody'
-#>      
-#> 
-#> Installing package into '/tmp/RtmpgxteBG/temp_libpath52b53ed8a444'
-#> (as 'lib' is unspecified)
 ```
 
 ## Data Format
@@ -48,7 +35,9 @@ clarity of the coral’s waters (water\_clarity\_preference), and the
 estimated geographic range of the coral. \#\# Example In this example we
 will show you how to evaluate the global distribution of ranges of
 corals. These can very dramatically depending on the ecosystem and
-reproductive strategies of the coral. \#\#\# Load Package
+reproductive strategies of the coral.
+
+### Load Package
 
 ``` r
 library(coral)
