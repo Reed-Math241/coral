@@ -26,7 +26,7 @@ The goal of the coral package is to provide data on the species and characterist
 
 The development version of 0.1.0 is available from [GitHub](https://github.com/) with:
 
-``` {r}
+``` {r, eval = FALSE}
 #only use auth_token if pkgGrph is a private repo
 install.packages("devtools")
 devtools::install_github("Reed-Math241/pkgGrph", 
