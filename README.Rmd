@@ -36,6 +36,7 @@ devtools::install_github("Reed-Math241/pkgGrph",
 This data is organized such that each species of coral has values for the ocean it is predominantly found in (ocean_basin), the preferred clarity of the coral's waters (water_clarity_preference), and the estimated geographic range of the coral. 
 ## Example
 In this example we will show you how to evaluate the global distribution of ranges of corals. These can very dramatically depending on the ecosystem and reproductive strategies of the coral.
+
 ### Load Package
 ```{r example}
 library(coral)
