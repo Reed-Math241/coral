@@ -24,7 +24,7 @@ The development version of 0.1.0 is available from
 #only use auth_token if pkgGrph is a private repo
 install.packages("devtools")
 devtools::install_github("Reed-Math241/pkgGrph", 
-                         auth_token = "1e21f285822afb4c8472ee27334a3ead08e8f3ab")
+                         auth_token = key)
 ```
 
 ## Data Format
@@ -47,7 +47,7 @@ library(coral)
 library(tidyverse)
 #> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
 #> ✓ ggplot2 3.3.3     ✓ purrr   0.3.4
-#> ✓ tibble  3.0.4     ✓ dplyr   1.0.2
+#> ✓ tibble  3.0.6     ✓ dplyr   1.0.4
 #> ✓ tidyr   1.1.2     ✓ stringr 1.4.0
 #> ✓ readr   1.4.0     ✓ forcats 0.5.0
 #> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
@@ -63,10 +63,10 @@ rangesize_plot <- ggplot(data = coral, mapping = aes(x = range_size)) +
   labs(x = "Range of coral (km)", y = "Number of Corals", 
        title = "Geographic Range of All Corals")
 rangesize_plot
-#> Warning: Removed 31108 rows containing non-finite values (stat_bin).
+#> Warning: Removed 727 rows containing non-finite values (stat_bin).
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" /> Here
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" /> Here
 we can see that the majority of corals have a relatively small range
 with a smaller number that have an exceedingly large range. These could
 be deep sea corals that reproduce by freely releasing offspring or they
