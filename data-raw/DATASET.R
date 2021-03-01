@@ -12,8 +12,12 @@ coral <- coral %>%
   filter(trait_name %in% c("Ocean basin", "Range size", "Water clarity preference",
                            "Abundance world"))
 coral <- coral %>%
+  group_by(specie_name) %>%
+  mutate(trait_num = n()) %>%
+  filter(trait_num == 4)
+coral <- coral %>%
   pivot_wider(names_from = trait_name,
-                     values_from = value) %>%
+              values_from = value) %>%
   separate(col = 'Range size', into = c("range_size", "what"),
            sep = ", ") %>%
   mutate(range_size = parse_number(range_size)) %>%
@@ -21,7 +25,7 @@ coral <- coral %>%
          ocean_basin = 'Ocean basin', 
          water_clarity_preference = 'Water clarity preference',
          abundance_world = 'Abundance world') %>%
-  select(-what)
+  select(species, ocean_basin, water_clarity_preference, abundance_world)
 glimpse(coral)
 
 
