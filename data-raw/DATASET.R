@@ -25,7 +25,7 @@ coral <- coral %>%
          ocean_basin = 'Ocean basin', 
          water_clarity_preference = 'Water clarity preference',
          abundance_world = 'Abundance world') %>%
-  select(species, ocean_basin, water_clarity_preference, abundance_world)
+  select(species, ocean_basin, water_clarity_preference, abundance_world, range_size)
 glimpse(coral)
 
 
