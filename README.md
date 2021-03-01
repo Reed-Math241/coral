@@ -66,9 +66,10 @@ rangesize_plot
 #> Warning: Removed 727 rows containing non-finite values (stat_bin).
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" /> Here
-we can see that the majority of corals have a relatively small range
-with a smaller number that have an exceedingly large range. These could
-be deep sea corals that reproduce by freely releasing offspring or they
-could be corals that are capable of growing in a large variety of
-different habitats. But we’ll leave it up to you to figure that out.
+<img src="man/figures/README-histogram-1.png" width="100%" /> ![Range
+Histogram](/man/figures/README-histogram.png) Here we can see that the
+majority of corals have a relatively small range with a smaller number
+that have an exceedingly large range. These could be deep sea corals
+that reproduce by freely releasing offspring or they could be corals
+that are capable of growing in a large variety of different habitats.
+But we’ll leave it up to you to figure that out.
