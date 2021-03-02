@@ -62,13 +62,11 @@ rangesize_plot <- ggplot(data = coral, mapping = aes(x = range_size)) +
   geom_histogram(binwidth = 500000, color = "#D5A5EA") + 
   labs(x = "Range of coral (km)", y = "Number of Corals", 
        title = "Geographic Range of All Corals")
-rangesize_plot
 ```
 
-<img src="man/figures/README-histogram-1.png" width="100%" /> ![Range
-Histogram](/man/figures/README-histogram-1.png) Here we can see that the
-majority of corals have a relatively small range with a smaller number
-that have an exceedingly large range. These could be deep sea corals
-that reproduce by freely releasing offspring or they could be corals
-that are capable of growing in a large variety of different habitats.
-But we’ll leave it up to you to figure that out.
+![Range Histogram](/man/figures/README-histogram-1.png) Here we can see
+that the majority of corals have a relatively small range with a smaller
+number that have an exceedingly large range. These could be deep sea
+corals that reproduce by freely releasing offspring or they could be
+corals that are capable of growing in a large variety of different
+habitats. But we’ll leave it up to you to figure that out.
