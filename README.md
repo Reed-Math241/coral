@@ -31,8 +31,9 @@ devtools::install_github("Reed-Math241/pkgGrph",
 
 This data is organized such that each species of coral has values for
 the ocean it is predominantly found in (ocean\_basin), the preferred
-clarity of the coral’s waters (water\_clarity\_preference), and the
-estimated geographic range of the coral.
+clarity of the coral’s waters (water\_clarity\_preference), the relative
+abundance of the coral (abundance\_world), and the estimated geographic
+range of the coral.
 
 ## Example
 
@@ -47,7 +48,7 @@ library(coral)
 library(tidyverse)
 #> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
 #> ✓ ggplot2 3.3.3     ✓ purrr   0.3.4
-#> ✓ tibble  3.0.6     ✓ dplyr   1.0.4
+#> ✓ tibble  3.1.0     ✓ dplyr   1.0.4
 #> ✓ tidyr   1.1.2     ✓ stringr 1.4.0
 #> ✓ readr   1.4.0     ✓ forcats 0.5.0
 #> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
