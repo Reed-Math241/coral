@@ -50,8 +50,8 @@ library(tidyverse)
 
 ### Create a histogram based on the range size of corals.
 ```{r histogram}
-rangesize_plot <- ggplot(data = coral, mapping = aes(x = range_size, color = abundance_world)) + 
-  geom_histogram(binwidth = 500000) + 
+rangesize_plot <- ggplot(data = coral, mapping = aes(x = range_size)) + 
+  geom_histogram(binwidth = 500000, color = "#D5A5EA") + 
   labs(x = "Range of coral (km)", y = "Number of Corals", 
        title = "Geographic Range of All Corals")
 ```
