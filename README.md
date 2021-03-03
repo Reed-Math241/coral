@@ -33,7 +33,7 @@ This data is organized such that each species of coral has values for
 the ocean it is predominantly found in (ocean\_basin), the preferred
 clarity of the coral’s waters (water\_clarity\_preference), the relative
 abundance of the coral (abundance\_world), and the estimated geographic
-range of the coral.
+range of the coral (range\_size) which is measured in km^2.
 
 ## Example
 
