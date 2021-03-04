@@ -51,9 +51,30 @@ library(tidyverse)
 ### Create a histogram based on the range size of corals.
 ```{r histogram}
 rangesize_plot <- ggplot(data = coral, mapping = aes(x = range_size)) + 
-  geom_histogram(binwidth = 500000, color = "#D5A5EA") + 
+  geom_histogram(bins = 20, fill = "#D5A5EA") + 
   labs(x = "Range of coral (km)", y = "Number of Corals", 
        title = "Geographic Range of All Corals")
 ```
 ![Range Histogram](/man/figures/README-histogram-1.png)
+
 Here we can see that the majority of corals have a relatively small range with a smaller number that have an exceedingly large range. These could be deep sea corals that reproduce by freely releasing offspring or they could be corals that are capable of growing in a large variety of different habitats. But we'll leave it up to you to figure that out. 
+
+```{r, eval = FALSE, echo = FALSE}
+# Figures to look at the data :)
+ggplot(coral, mapping = aes(x = range_size, fill = ocean_basin)) +
+  geom_histogram(bins = 60) +
+  scale_fill_brewer(type = "qual", palette = 3) +
+  labs(title = "Ocean Basin Distribution of Coral", x = "Geographic Range (km^2)",
+       y = "Number of Species", fill = "Ocean") +
+  theme_light()
+
+coral %>%
+  mutate(abundance_world = fct_relevel(factor(abundance_world, levels = c("common", "uncommon", "rare")))) %>%
+  ggplot(mapping = aes(x = range_size, fill = abundance_world)) + 
+  geom_histogram(bins = 60) + 
+  scale_fill_brewer(type = "qual", palette = 3, direction = -1) +
+  labs(x = "Geographic Range (km^2)", y = "Number of Species", 
+       title = "Coral Abundance and Range Size", fill = "Relative abundance") +
+  theme_light()
+```
+
