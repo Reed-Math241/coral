@@ -60,7 +60,6 @@ rangesize_plot <- ggplot(data = small_coral, mapping = aes(x = range_size, color
   theme_bw()+
   scale_color_tron()+
   scale_fill_tron()
-rangesize_plot
 ```
 ![Range Density](/man/figures/density.png)
 

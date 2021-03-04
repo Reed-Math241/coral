@@ -69,11 +69,9 @@ rangesize_plot <- ggplot(data = small_coral, mapping = aes(x = range_size, color
   theme_bw()+
   scale_color_tron()+
   scale_fill_tron()
-rangesize_plot
 ```
 
-<img src="man/figures/README-histogram-1.png" width="100%" /> ![Range
-Density](/man/figures/density.png)
+![Range Density](/man/figures/density.png)
 
 Here we can see that the majority of corals have a relatively small
 range with a smaller number that have an exceedingly large range. These
