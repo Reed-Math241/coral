@@ -64,14 +64,16 @@ small_coral <- coral %>%
   filter(range_size <= 25000000)
 rangesize_plot <- ggplot(data = small_coral, mapping = aes(x = range_size, color= abundance_world, fill = abundance_world)) + 
   geom_density(alpha = 0.5) + 
-  labs(x = "Range of coral (km)", y = "Number of Corals", 
+  labs(x = "Range of coral (km)", y = "Density", 
        title = "Geographic Range of All Corals")+
   theme_bw()+
   scale_color_tron()+
   scale_fill_tron()
+rangesize_plot
 ```
 
-![Range Density](/man/figures/readme_density.png)
+<img src="man/figures/README-histogram-1.png" width="100%" /> ![Range
+Density](/man/figures/density.png)
 
 Here we can see that the majority of corals have a relatively small
 range with a smaller number that have an exceedingly large range. These
