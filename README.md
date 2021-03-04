@@ -64,8 +64,8 @@ small_coral <- coral %>%
   filter(range_size <= 25000000)
 rangesize_plot <- ggplot(data = small_coral, mapping = aes(x = range_size, color= abundance_world, fill = abundance_world)) + 
   geom_density(alpha = 0.5) + 
-  labs(x = "Range of coral (km)", y = "Density", 
-       title = "Geographic Range of All Corals")+
+  labs(x = "Range of coral (km^2)", y = "Density", 
+       title = "Geographic Range of All Corals", fill = "Abundance in Ocean")+
   theme_bw()+
   scale_color_tron()+
   scale_fill_tron()
