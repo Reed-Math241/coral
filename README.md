@@ -21,10 +21,8 @@ The development version of 0.1.0 is available from
 [GitHub](https://github.com/) with:
 
 ``` r
-#only use auth_token if pkgGrph is a private repo
 install.packages("devtools")
-devtools::install_github("Reed-Math241/pkgGrph", 
-                         auth_token = key)
+devtools::install_github("Reed-Math241/coral")
 ```
 
 ## Data Format
@@ -48,7 +46,7 @@ library(coral)
 library(tidyverse)
 #> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
 #> ✓ ggplot2 3.3.3     ✓ purrr   0.3.4
-#> ✓ tibble  3.1.0     ✓ dplyr   1.0.4
+#> ✓ tibble  3.0.6     ✓ dplyr   1.0.4
 #> ✓ tidyr   1.1.2     ✓ stringr 1.4.0
 #> ✓ readr   1.4.0     ✓ forcats 0.5.0
 #> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
